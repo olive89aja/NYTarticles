@@ -19,7 +19,7 @@ $(document).ready(() => {
             for(i = 0; i < 10; i++) {
                 currentArticle = a.response.docs[i];
                 const article = $("<div>");
-                //const thumbnail = $("<img>");
+                const thumbnail = $("<img>");
                 const headline = $("<h4>");
                 const link = $("<a>");
                 const byline = $("<p>");
@@ -29,8 +29,8 @@ $(document).ready(() => {
                 headline.append(link);
                 byline.text(currentArticle.byline.original);
                 snippet.text(currentArticle.snippet);
-                //thumbnail.attr("src", "https://nytimes.com/"+currentArticle.multimedia[16].url);
-                //article.append(thumbnail);
+                thumbnail.attr("src", "https://nytimes.com/"+currentArticle.multimedia[15].url);
+                article.append(thumbnail);
                 article.append(headline);
                 article.append(byline);
                 article.append(snippet);
